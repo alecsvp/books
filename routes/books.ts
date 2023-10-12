@@ -10,5 +10,5 @@ export const booksRoute = express.Router()
 
 booksRoute.get('/books/:id/copies', identifyBookMiddleware, copies)
 booksRoute.patch('/books/:id/checkout', identifyBookMiddleware, identifyCopiesMiddleware, checkout)
-booksRoute.get('/books/:id/checkin', identifyBookMiddleware, identifyCopiesMiddleware, checkin)
+booksRoute.patch('/books/:id/checkin', identifyBookMiddleware, identifyCopiesMiddleware, checkin)
 booksRoute.get('/books/', list)
